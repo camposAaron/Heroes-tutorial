@@ -10,13 +10,19 @@ import { Hero } from '../Hero';
 export class DashboardComponent implements OnInit {
 
   heroes:Hero[];
+  hero:Hero;
 
   constructor(private heroService: HeroService) { 
     this.heroes = [];
+    this.hero = new Hero();
   }
 
   getHeroes():void{
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(1,6));
+  }
+
+  OnSelectedHero(hero:Hero):void{
+    this.hero = hero;
   }
   
   ngOnInit(): void {
