@@ -12,6 +12,7 @@
         background-color:  #f2f2f2;
         height: auto;
         align-items: left;
+        margin-top: 15px;
     
         #Hero{
             display: flex;
@@ -44,6 +45,26 @@
                 display: flex;
                 justify-content: center;
                 flex-grow: 3;
+            }
+
+            .delete{
+                display: flex;
+                width: 15%;
+                height: 20px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 999px;
+                font-family: arial;
+                background: #0c3d5a;
+                color: white;
+                border: 1px solid rgb(26, 95, 128);
+                margin-right: 5px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+
+            .delete:hover{
+                background: #10a1ce;
             }
     
         }

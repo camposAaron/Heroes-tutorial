@@ -1,13 +1,21 @@
 <!--Hero list-->
 <h2>Mis Heroes</h2>
+
+<div>
+    <label for="heroName">Nombre del Heroe:
+        <input #heroName>
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value); heroName.value='' ">Agregar</button>
+</div>
+
 <ul id="HeroList" class="heroes">
     <li id="Hero" *ngFor="let hero of heroes" 
-    [class.selected]="hero === selectedHero"
-    (click)="onSelectHero(hero)"
-    >
+        routerLink= "/detail/{{hero.id}}">
+    
        <span class="badget">{{hero.id}}</span>
        <span class="hero-name">{{hero.name}}</span>
+       <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+ 
     </li>
 </ul>   
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>

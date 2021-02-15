@@ -1,6 +1,6 @@
 
 <!--/*Hero details*/--><br>
-<div *ngIf="hero.name">
+<div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Detalles</h2>
         <div><span>ID: </span>{{hero.id}}</div>
         <div>
@@ -9,5 +9,6 @@
             </label>
         </div>
 </div>
-
+<button (click)="goBack()">Atras</button>
+<button (click)="save()">Guardar</button>
 

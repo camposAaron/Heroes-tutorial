@@ -11,11 +11,18 @@
 
 #box-messages{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     width: 30%;
+    height: 150px;
     background: #f2f2f2;
     border: 1px solid #444;
     box-shadow: 0px 2px 5px #ccc;
     color: green;
     margin-top: 5px;
+    overflow-y: scroll;
+  
+}
+
+#box-messages::-webkit-scrollbar-thumb:hover{
+    background:#5c89db;
 }
